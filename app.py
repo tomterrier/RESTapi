@@ -25,10 +25,6 @@ app.secret_key = 'bigt'
 api=Api(app)
 
 
-@app.before_first_request
-def create_tables():
-    db.create_all()  #creates the data.db file and its tables
-
 jwt=JWT(app, authenticate, identity)
 
 
